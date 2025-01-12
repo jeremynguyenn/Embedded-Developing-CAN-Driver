@@ -1,0 +1,6 @@
+1706332771153	Delete resource '3_system_drivers-timebase'
+1706332781899	Delete resource '2_system_drivers-uart'
+1706332785818	Delete resource '1_system_drivers-fpu'
+1706332811659	Delete resource '0_test'
+1706334273913	Delete resource '1_can_driver/0_test.launch'
+1706334293360	Delete resource '1_can_driver/Debug'

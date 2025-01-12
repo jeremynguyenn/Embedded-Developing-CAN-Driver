@@ -1,0 +1,17 @@
+02:28:36 **** Incremental Build of configuration Debug for project 1_can_driver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/can_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F446xx -c -I../Inc -I"C:/Users/user/Documents/CANBus-GroundUp/1_can_driver/chip_headers/CMSIS/Include" -I"C:/Users/user/Documents/CANBus-GroundUp/1_can_driver/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/can_driver.d" -MT"Src/can_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/can_driver.o"
+arm-none-eabi-gcc -o "1_can_driver.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\user\Documents\CANBus-GroundUp\1_can_driver\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1_can_driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1_can_driver.elf
+ 
+arm-none-eabi-size   1_can_driver.elf 
+arm-none-eabi-objdump -h -S  1_can_driver.elf  > "1_can_driver.list"
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_can_driver.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1_can_driver.list
+ 
+
+02:28:37 Build Finished. 0 errors, 0 warnings. (took 1s.48ms)
+

@@ -1,0 +1,7 @@
+C:/Users/user/Documents/CANBus-GroundUp/3_f44_can_normal-mode_rx/chip_headers/CMSIS/Include/core_cm4.h:1688:22:__NVIC_EnableIRQ	16	static
+../Src/can_driver.c:7:6:can_gpio_init	8	static
+../Src/can_driver.c:27:6:can_params_init	16	static
+../Src/can_driver.c:61:6:can_start	4	static
+../Src/can_driver.c:84:9:can_add_tx_message	32	static
+../Src/can_driver.c:163:9:can_get_rx_message	24	static
+../Src/can_driver.c:230:6:can_filter_config	16	static

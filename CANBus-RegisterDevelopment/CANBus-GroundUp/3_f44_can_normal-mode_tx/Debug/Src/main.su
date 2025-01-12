@@ -1,0 +1,2 @@
+../Src/main.c:24:6:CAN1_RX0_IRQHandler	8	static
+../Src/main.c:32:5:main	24	static

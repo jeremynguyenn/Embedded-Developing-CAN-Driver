@@ -1,0 +1,41 @@
+#include "stm32f4xx.h"
+#include "can_driver.h"
+#include "uart.h"
+#include "bsp.h"
+#include "fpu.h"
+#include "adc.h"
+#include "timebase.h"
+
+
+#define  GPIOAEN		(1U<<0)
+#define  PIN5			(1U<<5)
+#define  LED_PIN		PIN5
+
+
+uint8_t rx_data[10];
+can_rx_header_typedef rx_header;
+uint8_t count = 0;
+
+void CAN1_RX0_IRQHandler(void)
+{
+	if((CAN1->RF0R & CAN_RF0R_FMP0) != 0U)
+	{
+		can_get_rx_message(CAN_RX_FIFO0, rx_header, rx_data);
+		count++;
+	}
+}
+int main()
+{
+	/*Enable clock access to GPIOA*/
+	RCC->AHB1ENR |= GPIOAEN;
+
+	/*Set PA5 to output mode*/
+	GPIOA->MODER |= (1U<<10);
+	GPIOA->MODER &=~(1U<<11);
+
+	while(1)
+	{
+		GPIOA->ODR ^=LED_PIN;
+		for(int i = 0 ;i < 100000 ; i++){}
+	}
+}

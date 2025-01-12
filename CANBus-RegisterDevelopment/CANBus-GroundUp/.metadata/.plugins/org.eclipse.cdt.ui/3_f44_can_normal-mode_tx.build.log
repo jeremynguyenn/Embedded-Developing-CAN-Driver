@@ -1,0 +1,10 @@
+03:00:00 **** Incremental Build of configuration Debug for project 3_f44_can_normal-mode_tx ****
+make -j4 all 
+arm-none-eabi-size   3_f44_can_normal-mode_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7416	    108	   1668	   9192	   23e8	3_f44_can_normal-mode_tx.elf
+Finished building: default.size.stdout
+ 
+
+03:00:00 Build Finished. 0 errors, 0 warnings. (took 419ms)
+
